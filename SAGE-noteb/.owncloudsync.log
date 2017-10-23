@@ -1,0 +1,154 @@
+# timestamp | duration | file | instruction | dir | modtime | etag | size | fileId | status | errorString | http result code | other size | other modtime | other etag | other fileId | other instruction
+#=#=#=# Syncrun started 2017-10-23T10:30:58 until 2017-10-23T10:30:59 (812 msec)
+|0|INPUTS|INST_NEW|Up|1506887614||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS|INST_NEW|Up|1473064336||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap1.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap10.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap11.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap12.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap2.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap3.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap4.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap5.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap6.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap7.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap8.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/NOTAS/notas-cap9.tex|INST_NEW|Up|1473064336||56||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/bibliografia.tex|INST_NEW|Up|1505035240||7287||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-1-interface-jupyter.log|INST_NEW|Up|1505149252||1206906||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-1-interface-jupyter.tex|INST_NEW|Up|1506243007||35683||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-10-discreta.tex|INST_NEW|Up|1473064336||18959||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-11-probabilidad.tex|INST_NEW|Up|1473064336||48785||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-12-miscelanea.tex|INST_NEW|Up|1473064336||34795||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-2-calculadora.tex|INST_NEW|Up|1506887614||64058||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-3-estructuras_datos.tex|INST_NEW|Up|1506156359||38797||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-4-programacion.tex|INST_NEW|Up|1506162134||71088||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-5-complementos.tex|INST_NEW|Up|1473064336||38087||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-6-tnumeros1.tex|INST_NEW|Up|1473064336||34964||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-7-aproximacion.tex|INST_NEW|Up|1473064336||78150||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-8-cripto.tex|INST_NEW|Up|1473064336||44192||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/cap-9-tnumeros2.tex|INST_NEW|Up|1473064336||24855||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|INPUTS/prologo.tex|INST_NEW|Up|1504000477||9562||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB|INST_NEW|Up|1506888128||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN|INST_NEW|Up|1506888128||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/21-CAVAN-graficas-matplotlib.ipynb|INST_NEW|Up|1506459009||6545||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/21-CAVAN-graficas.ipynb|INST_NEW|Up|1504467434||321537||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/22-CAVAN-calculo-s1.ipynb|INST_NEW|Up|1474219726||90800||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/23-CAVAN-reduccion-gaussiana.ipynb|INST_NEW|Up|1504612898||7656||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/24-CAVAN-raices-reales.ipynb|INST_NEW|Up|1506848781||217891||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/27-CAVAN-tangencias.ipynb|INST_NEW|Up|1474221133||18885||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/raices.gif|INST_NEW|Up|1506848655||422482||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/CAVAN/superficie.png|INST_NEW|Up|1506458992||254476||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO|INST_NEW|Up|1506888128||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/ARCHIVOS|INST_NEW|Up|1504433918||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/ARCHIVOS/COMPRIMIR|INST_NEW|Up|1504434330||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/ARCHIVOS/COMPRIMIR/canta.txt|INST_NEW|Up|1504434320||573||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/ARCHIVOS/COMPRIMIR/lugar.txt|INST_NEW|Up|1504434008||1221||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/ARCHIVOS/tragedy-commons.pdf|INST_NEW|Up|1504433894||1539335||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/Interaccion-con-SO.ipynb|INST_NEW|Up|1504442578||26155||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/hw.c|INST_NEW|Up|1504435558||60||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/markdown.ipynb|INST_NEW|Up|1504441842||2308||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/primera-clase-SOL.ipynb|INST_NEW|Up|1506159256||14627||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/INTRO/primera-clase.ipynb|INST_NEW|Up|1503079502||18876||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR|INST_NEW|Up|1506888165||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR/41-PROGR-diccionario.ipynb|INST_NEW|Up|1506159559||18288||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR/42-PROGR-recursiones.ipynb|INST_NEW|Up|1506257389||969913||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR/43-PROGR-ordenacion-listas.ipynb|INST_NEW|Up|1506160414||7757||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR/44-PROGR-mensajes-error.ipynb|INST_NEW|Up|1506243642||36099||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|IPYNB/PROGR/PALABRAS2.txt|INST_NEW|Up|1506159669||1196254||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs|INST_NEW|Up|1503079739||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/CAVAN|INST_NEW|Up|1506887909||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/CAVAN/21-CAVAN-graficas-matplotlib.pdf|INST_NEW|Up|1504616451||75322||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/CAVAN/dos_ejercicios_calculo.pdf|INST_NEW|Up|1506887909||136547||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/CAVAN/un_ejercicio_calculo.pdf|INST_NEW|Up|1506887889||168463||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/INTRO|INST_NEW|Up|1504616377||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/INTRO/Interaccion-con-SO.pdf|INST_NEW|Up|1504616294||89349||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|PDFs/INTRO/markdown.pdf|INST_NEW|Up|1504616317||100668||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin|INST_NEW|Up|1473459252||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/gmp-chudnovsky.c|INST_NEW|Up|1473064336||16191||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb|INST_NEW|Up|1504443631||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/CONVERTIR_SWS|INST_NEW|Up|1499193067||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/INSTRUCCIONES.txt|INST_NEW|Up|1473460498||944||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/IPYNB|INST_NEW|Up|1506888128||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/sagews2ipynb.py|INST_NEW|Up|1473371545||17191||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/sws2ipynb.py|INST_NEW|Up|1473458972||1721||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|bin/sws2ipynb/sws2sagews.py|INST_NEW|Up|1473366923||7510||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos|INST_NEW|Up|1473064336||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/2-00.cod|INST_NEW|Up|1473064336||123||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/Hamlet.cod|INST_NEW|Up|1473064336||1525||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/SumaImpares.cod|INST_NEW|Up|1473064336||183||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/baricentro.cod|INST_NEW|Up|1473064336||952||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/coef-indet.cod|INST_NEW|Up|1473064336||578||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/dif-div.cod|INST_NEW|Up|1473064336||331||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/ej0.1.cod|INST_NEW|Up|1473064336||73||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|codigos/logica1.cod|INST_NEW|Up|1473064336||550||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes|INST_NEW|Up|1506848487||4096||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/4arbol.png|INST_NEW|Up|1473064336||2593||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/4ciclo.png|INST_NEW|Up|1473064336||7518||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/4grafo.png|INST_NEW|Up|1473064336||2707||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Baricentro.png|INST_NEW|Up|1473064336||10252||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Cubo.png|INST_NEW|Up|1473064336||39819||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Dado.png|INST_NEW|Up|1473064336||102052||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/DadoEnHoja.png|INST_NEW|Up|1473064336||29405||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/DesplegableAction.png|INST_NEW|Up|1473064336||27424||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/DesplegableData.png|INST_NEW|Up|1473064336||9684||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/DesplegableFile.png|INST_NEW|Up|1473064336||22935||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/DesplegableInterprete.png|INST_NEW|Up|1473064336||32578||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/EsqueletoCubo.png|INST_NEW|Up|1473064336||32565||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf00.png|INST_NEW|Up|1473064336||5739||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf01.png|INST_NEW|Up|1473064336||7926||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf02.png|INST_NEW|Up|1473064336||13276||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf03.png|INST_NEW|Up|1473064336||8054||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf04.png|INST_NEW|Up|1473064336||5282||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/Graf05.png|INST_NEW|Up|1473064336||19982||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/HojaCeroMarcada.png|INST_NEW|Up|1473064336||2061||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/InsertaDado.png|INST_NEW|Up|1473064336||16644||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/SignIn.png|INST_NEW|Up|1473064336||112288||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/SumaImpares.png|INST_NEW|Up|1473064336||22657||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/VerticesCubo.png|INST_NEW|Up|1473064336||7879||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/activar_celda.png|INST_NEW|Up|1473064336||38391||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/arqui.pdf|INST_NEW|Up|1473064336||135325||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/bernstein-p.pdf|INST_NEW|Up|1473064336||12718||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/cabecera.png|INST_NEW|Up|1473064336||14755||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/circulos.jpeg|INST_NEW|Up|1473064336||49730||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/crear_cuadro.png|INST_NEW|Up|1473064336||35826||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/crear_nuevo_bajo.png|INST_NEW|Up|1473064336||35655||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/cuadro_texto.png|INST_NEW|Up|1473064336||66884||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/durero.pdf|INST_NEW|Up|1473064336||7277||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/editando.png|INST_NEW|Up|1473064336||72897||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/evaluar_celda.png|INST_NEW|Up|1473064336||42782||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/flor.jpg|INST_NEW|Up|1473064336||43582||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/graf_exp2.jpg|INST_NEW|Up|1473064336||24251||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/hoja_cero.png|INST_NEW|Up|1473064336||34800||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/hoja_cero_html.png|INST_NEW|Up|1473064336||43830||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/icon128x128.png|INST_NEW|Up|1473064336||10711||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/interprete.png|INST_NEW|Up|1473064336||40714||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/lista_vacia.png|INST_NEW|Up|1473064336||53209||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/logar.pdf|INST_NEW|Up|1473064336||145548||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/login-jupyter.png|INST_NEW|Up|1502638070||38057||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/medianasAyC.png|INST_NEW|Up|1473064336||2526||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/metodos_simplify.png|INST_NEW|Up|1473064336||12373||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/newt.pdf|INST_NEW|Up|1473064336||86531||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/newton.jpg|INST_NEW|Up|1473064336||40760||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/noteb-1.png|INST_NEW|Up|1502640011||50124||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/pi-arqui.pdf|INST_NEW|Up|1473064336||9885||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/polincir.pdf|INST_NEW|Up|1473064336||79328||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/stock_m.jpg|INST_NEW|Up|1473064336||8693||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/subcabecera.png|INST_NEW|Up|1473064336||18820||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/superficie.pdf|INST_NEW|Up|1504611881||227663||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/superficie.png|INST_NEW|Up|1504612104||254476||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/triangle.png|INST_NEW|Up|1473064336||48598||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/triangulo.png|INST_NEW|Up|1473064336||7006||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+|0|imagenes/untitled.png|INST_NEW|Up|1473064336||48738||6|Ignored because of the "choose what to sync" blacklist|0|0|0|||INST_NONE|
+#=#=#=# Syncrun started 2017-10-23T10:33:16 until 2017-10-23T10:33:18 (1508 msec)
+08:33:17|178|IPYNB/CAVAN/25-CAVAN-ejers.ipynb|INST_NEW|Down|1507454624|59d9eebed83c0|449256||4||0|0|0|||INST_NONE|
+|0|IPYNB/EFICIENCIA|INST_NEW|Down|1504467099|59ac589b1eb65|0||4||0|0|0|||INST_NONE|
+08:33:17|170|IPYNB/PROGR/31_ESTRD_ejercicios_sol.ipynb|INST_NEW|Down|1507448251|59d9d82841b60|31931||4||0|0|0|||INST_NONE|
+08:33:18|202|PDFs/INTRO/Interaccion-con-SO (2).pdf|INST_NEW|Down|1504616294|59ae9fa61c09f|89349||4||0|0|0|||INST_NONE|
+08:33:18|127|PDFs/INTRO/markdown (2).pdf|INST_NEW|Down|1504616317|59ae9fa64c210|100668||4||0|0|0|||INST_NONE|
+|0|PDFs/PROGR|INST_NEW|Down|1507891152|59e098ebd6cdf|0||4||0|0|0|||INST_NONE|
+08:33:18|112|PDFs/PROGR/ejercicios-10-10-2016.pdf|INST_NEW|Down|1507535103|59e098b131077|43734||4||0|0|0|||INST_NONE|
+#=#=#=# Syncrun started 2017-10-23T10:33:56 until 2017-10-23T10:33:57 (892 msec)
+|0|PDFs/PROGR|INST_SYNC|Up|1508747634||4096||4||0|0|1507891152|59e098ebd6cdf||INST_NONE|
+08:33:56|414|PDFs/PROGR/Ejercicios-2016-10-10-sol-2017.pdf|INST_NEW|Up|1508747634||88262||4||201|0|0|||INST_NONE|
+#=#=#=# Syncrun started 2017-10-23T10:34:44 until 2017-10-23T10:34:45 (490 msec)
