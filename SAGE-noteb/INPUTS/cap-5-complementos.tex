@@ -27,9 +27,7 @@ en cuenta que los tiempos de c\'alculo que obtenemos al evaluar la eficiencia
 dependen mucho de la m\'aquina que estemos usando.
 
 Esta secci\'on intenta resumir el contenido de parte del 
-\href{
-http://verso.mat.uam.es/~pablo.angulo/doc/laboratorio/bloqueII.html}
-{Bloque II} en las notas de Pablo Angulo mencionadas en el Pr\'ologo.
+\href{http://verso.mat.uam.es/~pablo.angulo/doc/laboratorio/bloqueII.html}{Bloque II} en las notas de Pablo Angulo mencionadas en el Pr\'ologo.
  
  
  \item{\sc Iteradores:} por \'ultimo, dentro de la subsecci\'on sobre la memoria
@@ -71,7 +69,7 @@ esencialmente las mismas. As\'{\i}, por ejemplo, el algoritmo para efectuar la
 divisi\'on con resto es pr\'acticamente el mismo para polinomios y para
 n\'umeros enteros. 
 
-Una explicaci\'on m\'as detallada, con algunos ejercicios, de este basunto puede encontrarse en este
+Una explicaci\'on m\'as detallada, con algunos ejercicios, de este asunto puede encontrarse en este
 \href{http://150.244.21.37/PDFs/COMPL/StmasNumeracion.pdf}{documento}.
 
 \subsection{Cambios de base}
@@ -294,7 +292,7 @@ entero tambi\'en grande, es, como veremos en el cap\'{\i}tulo \ref{cript},
 usado en criptograf\'{\i}a para encriptar mensajes, mientras que la
 operaci\'on inversa, el {\itshape logaritmo discreto}, es decir el c\'alculo del
 exponente $n$ tal que $a^n$ m\'odulo $m$ es un entero prefijado $M$, es clave
-para romper el sistema que encripta mediante potencias. . 
+para romper el sistema que encripta mediante potencias.
 
 
 \subsection{Listas binarias}
@@ -346,6 +344,31 @@ al archivo {\sc no los $8$ ceros o unos} sino el caracter que corresponde a los
 $8$ bits en ASCII. De esta forma lo que realmente se escribe al archivo es la
 cadena de bits original y el archivo resultante ocupa $N$ bits o $N/8$ bytes. 
 
+
+\begin{ejer}
+	\begin{enumerate}
+		\item Define funciones que permitan crear un archivo que contenga  la informaci\'on correspondiente a $2^n$ bits aleatorios (probabilidad $1/2$ de cero y probabilidad $1/2$ de uno) y que ocupe $2^n//8$ bytes ($2^n$ bits). 
+		
+		\item Dado un real $0<p<1$ define una funci\'on para generar archivos parecidos a los del punto anterior pero con probabilidad $p$ de cero y $1-p$ de uno. Para hacer esto generamos un decimal aleatorio del intervalo $(0,1)$ (se puede hacer con {\tt random()}) y si es menor que $p$ producimos un cero y si es mayor un uno. 
+		
+		  \item Genera $21$ archivos correspondientes a valores de $p$ de la forma $j*(1/20)$ con $0\le j\le 20$, asign\'andoles autom\'aticamente nombres que incluyan el valor de $p$. Todos estos archivos deben tener  tama\~no $2048*2048=2^{22}$ bits.
+		  
+		  \item  Comprime los $21$ archivos generados 
+		  \begin{center}
+		  \verb|tar cvzf <nombre-del-archivo.tar.gz> <nombre-del-archivo>|
+		  \end{center}
+		  y produce la lista de duplas $(p,t_p)$ con $t_p$ el  tama\~nos en bits del archivo comprimido correspondiente a la probabilidad $p$.
+		  
+		  \item Representa en un gr\'afico los puntos $(p,t_p)$, y comprueba as\'{i} que {\sc los archivos se comprimen m\'as cuanto m\'as predecible es su contenido.} 
+		
+		  
+	\end{enumerate}
+	
+\end{ejer}
+
+
+
+
 \subsection{La Enciclopedia de sucesiones de enteros}
 
 La \href{https://oeis.org/}{{\itshape  Enciclopedia de sucesiones de enteros}}
@@ -391,8 +414,8 @@ la {\itshape cifra dominante} de un entero de la forma $a^k$, es decir, su
 primer d\'{\i}gito por la izquierda, sin necesidad de calcular $a^k$. 
 
 \item Por supuesto,  podemos calcular de manera eficiente la cifra de las
-unidades de $a^k$, en una base cualquiera $b$,  mediante la instrucci\'on 
-\lstinline|potencia_mod(a,k,b)| que hemos visto en esta secci\'on. ?`C\'omo
+unidades de $a^k$, en una base cualquiera $b$  mediante 
+\lstinline|potencia_mod(a,k,b)| como hemos visto en esta secci\'on. ?`C\'omo
 podr\'iamos calcular la segunda cifra por la derecha o la tercera?
 
 \item Hemos visto al menos dos ejemplos, \hyperref[mergesort]{\tt mergesort}, y
@@ -609,8 +632,8 @@ time LL = list(cuadrado([L1,L2,L3,L4]))
 Mediante este truco conseguimos que la carga se equilibre, los cuatro n\'ucleos
 tardan m\'as o menos lo mismo y ese es el tiempo total resultante. 
 
-Puedes comprobar lo anterior, los tiempos por supuesto dependen del ordenador que estemoa usando, en la hoja 
-\href{http://localhost:8888/notebooks/PROGR/COMPL/52-COMPL-paralelo.ipynb}{\tt 52-COMPL-paralelo.ipynb}.
+Puedes comprobar lo anterior  en la hoja 
+\href{http://localhost:8888/notebooks/PROGR/COMPL/52-COMPL-paralelo.ipynb}{\tt 52-COMPL-paralelo.ipynb}. Los tiempos por supuesto dependen del ordenador que estemos usando.
 
 %%%PARA LUEGO%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%Concretamente, estos ejemplos est\'an en las hojas 
@@ -682,7 +705,7 @@ varias veces y devuelve un promedio. La instrucci\'on admite varios par\'ametros
 n\'umero de
 repeticiones, etc.
 
-Por \'ultimo, \lstinline|cProfile| produce un resultado mucho m\'as detallado
+Por \'ultimo, \lstinline|prun| produce un resultado mucho m\'as detallado
 que nos
 permite saber 
 c\'omo se distribuye el tiempo total de c\'alculo entre las distintas funciones
@@ -693,18 +716,18 @@ que se ejecutan dentro de nuestro programa.
 Se invoca el {\tt profiler} mediante
 
 \begin{lstlisting}
-import cProfile, pstats
-cProfile.runctx("funcion(n,m,...)", globals(), locals(), DATA + "Profile.prof")
-s = pstats.Stats(DATA + "Profile.prof")
-s.strip_dirs().sort_stats("time").print_stats()
+% prun -q -T <archivo.txt> <instruccion>
 \end{lstlisting}
 y hay un par de ejemplos de su uso en la hoja de {\sage} 
-\href{http://sage.mat.uam.es:8888/home/pub/10/}{\tt
-53-COMPL-eficiencia-tiempo.sws} que acompa\~na
-esta subsecci\'on.
+\href{http://localhost:8888/notebooks/PROGR/COMPL/53-COMPL-eficiencia-tiempo.ipynb}{\tt 53-COMPL-eficiencia-tiempo.ipynb} que acompa\~na esta subsecci\'on.
 
 
+Hay otro {\tt profiler},  \lstinline|lprun|,  para c\'odigo \lstinline|Python|, no funciona sobre funciones que contienen c\'odigo {\sage}, que analiza el tiempo total utilizado en cada l\'inea de c\'odigo. 
 
+\begin{lstlisting}
+%load_ext line_profiler
+%lprun -q -T <archivo.txt> -f <funcion> <funcion>(<parametros>)
+\end{lstlisting}
 
 
 
@@ -719,10 +742,24 @@ instrucci\'on
 megabytes (MB), que est\'a en uso en el momento en que se invoca. 
 
 Us\'andola, como en la hoja 
-\href{http://sage.mat.uam.es:8888/home/pub/11/}{\tt 54-COMPL-eficiencia-ram.sws}
+\href{http://localhost:8888/notebooks/PROGR/COMPL/54-COMPL-eficiencia-ram.ipynb}{\tt 54-COMPL-eficiencia-ram.ipynb}
 que acompa\~na
 esta subsecci\'on,  podemos ver los
-incrementos en memoria RAM al generar grandes estructuras de datos.
+incrementos en memoria RAM al generar grandes estructuras de datos. 
+
+
+
+Para funciones que usan \lstinline|Python|, pero no {\sage},    disponemos de un {\tt profiler} de memoria RAM, \lstinline|mprun|,  que funciona de forma parecida a \lstinline|lprun|. 
+
+
+\begin{lstlisting}
+%load_ext memory_profiler
+%mprun -T <archivo> -f <funcion> <funcion>(<parametros>)
+\end{lstlisting}
+
+Si hemos ejecutado c\'odigo previamente en la hoja hay que reiniciar el n\'ucleo para que libere toda la memoria utilizada previamente. Si no se hace se acumula a la ya utilizada.
+
+Pueden verse ejemplos de uso de  \lstinline|lprun| y \lstinline|mprun| en la hoja \href{http://localhost:8888/notebooks/PROGR/COMPL/55-COMPL-lprun-mprun.ipynb}{\tt 55-COMPL-lprun-mprun.ipynb}.
 
 
 \subsubsection{Iteradores}\label{iter}
@@ -774,6 +811,14 @@ Condition}.
 N\'otese
 que el generador va delimitado por par\'entesis en lugar de corchetes. 
  
+\item Por ejemplo
+
+\begin{lstlisting}
+g = (n**2 for n in xsrange(10**8) if is_prime(x))
+\end{lstlisting}
+\noindent define un generador que produce los cuadrados de los primos, {\itshape bajo demanda}, es decir, cada vez que ejecutamos \lstinline|g.next()| devuelve el cuadrado de un primo.  
+
+
  \end{enumerate}
 
 
@@ -822,15 +867,16 @@ se consiguen enormes mejoras adicionales,  usar los correspondientes objetos de
 \lstinline|numpy| en lugar de los propios de {\sage}. 
 
 
-Pueden verse algunos ejemplos de estas mejoras en las hojas 
-\href{http://sage.mat.uam.es:8888/home/pub/12/}{\tt 55-COMPL-cython.sws} y 
-\href{http://sage.mat.uam.es:8888/home/pub/13/}{\tt
-56-COMPL-planeta-cython.sws}. En la primera se discute la manera de conseguir
+Pueden verse algunos ejemplos de estas mejoras en la hoja
+\href{http://localhost:8888/notebooks/PROGR/COMPL/56-COMPL-cython.ipynb}{\tt 56-COMPL-cython.ipynb},  
+ donde  se discute la manera de conseguir
 grandes cantidades de n\'umeros aleatorios de manera eficiente, es decir, usando
-librer\'{\i}as de funciones compiladas en $C$, y volveremos sobre este asunto en
+librer\'{\i}as de funciones compiladas en $C$. Volveremos sobre este asunto en
 el cap\'{\i}tulo \ref{prob}, Probabilidad,  en el que ser\'a crucial.
 
-En la segunda se simula, usando m\'etodos elementales, el movimiento de un
+
+En la hoja  
+\href{http://localhost:8888/notebooks/PROGR/COMPL/57-COMPL-planeta-cython-sympl.ipynb}{\tt 57-COMPL-planeta-cython-sympl.ipynb} se simula, usando m\'etodos elementales, el movimiento de un
 planeta alrededor del Sol de acuerdo a las Leyes de Newton. Si te interesan
 los detalles de este asunto puedes leer, y es absolutamente recomendable,  este
 \href{http://150.244.21.37/PDFs/MISCE/Feynman-V1-Ch09-Newtons-Laws.pdf}{cap\'{\i}tulo en el libro
@@ -853,7 +899,7 @@ utilizar Python (y {\sage}), en C\'alculo Num\'erico.
 En este curso veremos muy poco C\'alculo Num\'erico ya que hay una asignatura
 espec\'{\i}fica en el segundo cuatrimestre, y adem\'as en ella se utiliza Matlab
 en lugar de {\sage}, pero ser\'{\i}a perfectamente factible utilizar la
-combinaci\'on {\sage}+cython+\lstinline|numpy| para conseguir los mismos
+combinaci\'on {\sage}+\lstinline|cython|+\lstinline|numpy| para conseguir los mismos
 resultados
 que con
 Matlab\footnote{Matlab, al contrario que {\sage}, no es un programa gratuito
@@ -875,21 +921,21 @@ tanto, muy optimizadas.
 La sintaxis de \lstinline|numpy| es algo diferente a la de {\sage}, por ejemplo
 \lstinline|A*A| para matrices de \lstinline|numpy| es el producto elemento a
 elemento
-mientras que el producto de matrices se obtiene mediante \lstinline|A.dot(A)|,
-y, en este curso no usaremos sistem\'aticamente, aunque quiz\'a s\'{\i}
+mientras que el producto de matrices se obtiene mediante \lstinline|A.dot(A)|. En este curso no usaremos sistem\'aticamente, aunque quiz\'a s\'{\i}
 puntualmente, \lstinline|numpy|  para el c\'alculo con matrices.
 
 En la hoja 
-\href{http://sage.mat.uam.es:8888/home/pub/14/}{\tt 57-COMPL-numpy.sws}
+\href{http://localhost:8888/notebooks/PROGR/COMPL/58-COMPL-numpy.ipynb}{\tt 58-COMPL-numpy.ipynb}
 se pueden ver un par de ejemplos que comparan los tiempos de ejecuci\'on de
 c\'odigos que utilizan \lstinline|numpy| con c\'odigos similares que no lo
 utilizan.
 
 
 Un ejemplo m\'as se encuentra en la hoja 
-\href{http://sage.mat.uam.es:8888/home/pub/15/}{\tt
-58-COMPL-fractal-cython-numpy.sws}, que contiene un programa escrito por Pablo
-Angulo, dedicada a la obtenci\'on de gr\'aficas de conjuntos fractales, y en
+\begin{center}
+\href{http://localhost:8888/notebooks/PROGR/COMPL/59-COMPL-fractal-cython-numpy-MV.ipynb}{\tt 59-COMPL-fractal-cython-numpy-MV.ipynb } 
+\end{center}
+\noindent dedicada a la obtenci\'on de gr\'aficas de conjuntos fractales, y en
 particular del conjunto de Mandelbrot.
 
 Puedes leer la 

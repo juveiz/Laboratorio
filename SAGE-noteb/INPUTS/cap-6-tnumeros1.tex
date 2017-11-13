@@ -24,7 +24,7 @@ En otros casos plantearemos algunos ejercicios cuya respuesta ya debe ser
 conocida, te\'oricamente, a trav\'es de 
 la asignatura {\itshape Conjuntos y
 N\'umeros}, y por tanto son tambi\'en, en otro sentido, {\itshape ret\'oricos}.
-En particular,  supondremos conocidos los siguientes contenidos:
+En particular,  supondremos conocidos, aunque los repasaremos brevemente,  los siguientes contenidos:
 
 \begin{enumerate}
  \item Las nociones de grupo abeliano, anillo y cuerpo. Las definiciones
@@ -54,6 +54,64 @@ adelante en criptograf\'{\i}a y al estudiar algunos criterios para determinar si
 un entero es primo.
  
 \end{enumerate}
+
+\section{Grupos, anillos y cuerpos}
+
+Llamamos \'Algebra al estudio de las estructuras algebraicas, es decir, conjuntos con operaciones que cumplen ciertas propiedades. Este estudio incluye el de los sistemas de  ecuaciones polinomiales en una o varias variables, que era el objeto del   \'Algebra cl\'asica. 
+
+
+\subsection{Grupos}
+Un {\bf grupo} es un conjunto $G$ con una operaci\'on, que denotamos mediante $g*g^{\prime}$,  definida para cada dos elementos del grupo y que como resultado da un elemento del grupo, verificando 
+\begin{enumerate}
+	\item (Asociatividad) $(g*g^{\prime})*g^{\prime\prime}=g*(g^{\prime})*g^{\prime\prime})$ para cualesquiera elementos del grupo.
+	\item (Elemento neutro) Existe un elemento $e\in G$ tal que $g*e=e*g=g$ para cualquier $g\in G.$
+	\item (Inverso) Para todo elemento $g\in G$ existe otro, denotado mediante $g^{-1}$, tal que $g*g^{-1}=g^{-1}*g=e$.
+	\end{enumerate}
+	
+\begin{enumerate}
+\item 	Si para todo par de elementos, $g,\ g^{\prime}\in G$, se verifica  $g*g^{\prime}= g^{\prime}*g$ decimos que el grupo es {\bf conmutativo} o tambi\'en {\bf abeliano}. 
+\item Ejemplos b\'asicos de grupos son los n\'umeros enteros (racionales,  reales o complejos) con la operaci\'on  {\itshape suma} y los racionales (reales o complejos) no nulos con la operaci\'on {\itshape producto} , pero los que m\'as nos interesan en este curso son los asociados a las clases de restos.
+	
+\item El n\'umero de elementos de un grupo $G$ que sea finito se llama su {\bf orden} ($ord(G)$).
+
+\item  Un {\bf subgrupo} de un grupo $G$ es un subconjunto $G_1$ de $G$ tal que con la misma operaci\'on de $G$ es un grupo. En particular es necesario y suficiente para que $G_1$ sea un subgrupo que, para cada dos elementos $g,g^{\prime}$, de $G_1$,   $g*(g^{\prime})^{-1}$ tambi\'en est\'e en $G_1.$ 
+
+\item Denotamos mediante $g^n$ el resultado de $g*g*g\dots \textbf{ $n$ factores}\dots *g$. No hace falta escribir par\'entesis gracias a la propiedad asociativa. De la misma forma $g^{-n}$ es $(g^{-1})^n.$
+
+
+\item Todo elemento $g\in G$,  {\itshape genera un subgrupo} $<g>$ de $G$ definido como 
+\[<g>:=\{g^n\mid n\in \mathbb{Z}\}.\] 
+
+\item Si $G$ es finito necesariamente $<g>$ tambi\'en lo ser\'a, y definimos el {\bf orden} del elemento $g$, $ord(g)$, como el orden del subgrupo  $<g>$ generado por $g$. 
+
+ \item La propiedad fundamental de estos {\itshape \'ordenes} es el teorema de Lagrange afirmando que {\itshape el orden de todo subgrupo, en particular el orden de todo elemento, divide al orden del grupo. }
+ 
+ \footnotesize
+ Dado el subgrupo $G_1\subset G$, el teorema de Lagrange se cumple gracias a que las clases de equivalenca determinadas en $G$ por la relaci\'on $g\sim g^{\prime}$ si $g*(g^{\prime})^{-1}$ pertenece a $G_1$ tienen todas el mismo n\'umero de elementos que $G_1.$
+ 
+ \normalsize
+ 
+ \end{enumerate}
+
+\subsection{Anillos}
+
+Un {\bf anillo} es un conjunto $A$ con dos operaciones, que denotamos habitualmente como suma y producto, tal que 
+\begin{enumerate}
+	\item Con respecto a la suma $A$ es un grupo abeliano.
+	\item (Neutro para el producto) Existe un elemento que denotamos mediante $1$ en $A$ tal que  $a\cdot 1=1\cdot a=a$ para todo elemento $a\in A.$
+	\item (Distributiva) Para toda tripleta de elementos $a,\ a_1,\ a_2 \in A$ se verifica $a\cdot (a_1+a_2)=a\cdot a_1+a\cdot a_2.$
+	\end{enumerate}
+
+Si el producto de dos elementos cualesquiera es conmutaivo ($a_1\cdot a_2=a_2\cdot a_1$) decimos que el {\bf anillo es conmutativo}.
+
+Los n\'umeros enteros, racionales, reales y complejos son anillos conmutativos con las operaciones habituales. Las matrices cuadradas $n\times n$ son un anillo \'unicamente conmutativo en el caso $n=1$. Los anillos que m\'as nos interesan son los de clases de restos. 
+
+\subsection{Cuerpos}
+
+Un {\bf cuerpo} $K$  es un anilo en el que todo elemento no nulo tiene un inverso para el producto, es decir, para todo $x\ne 0$ existe un elemento $x^{-1}$ tal que $x\cdot x^{-1}=x^{-1}\cdot x=1.$ 
+
+Los anillos  de racionales, reales y complejos son cuerpos, pero los que m\'as nos interesan son los de clases de restos m\'odulo un primo. 
+
 
 
 
@@ -88,8 +146,7 @@ clases se eligen elementos {\bf cualesquiera} en cada una de ellas,
 se operan y la clase resultado es la clase del resultado.  Es 
 esencial comprobar que la clase del resultado no depende de la 
 elecci\'on de representantes de cada una de las clases, porque en 
-caso contrario la operaci\'on no estar\'{\i}a bien definida (habr\'{\i} 
-a varios resultados para una misma suma o producto). 
+caso contrario la operaci\'on no estar\'{\i}a bien definida (habr\'{\i}a varios resultados para una misma suma o producto). 
 
 Se obtiene as\'{\i}   un 
 anillo conmutativo, al que denotamos mediante $\Bbb Z_{m}$, y llamamos {\itshape
@@ -147,15 +204,18 @@ $\mathbb{Z}_p$ como en el apartado anterior, el m\'{\i}nimo $N$ con esa
 propiedad. 
 
 
-\item Consideramos ahora un m\'odulo compuesto, por ejemplo
-\lstinline|m=nth_prime(2013)*nth_prime(2014)|, y queremos estudiar el mismo tipo
+\item Consideramos ahora  un m\'odulo compuesto, por ejemplo
+\begin{center}
+\lstinline|m=nth_prime(2013)*nth_prime(2014)|,
+\end{center}
+\noindent  y queremos estudiar el mismo tipo
 de resultados.
 
 Observar que las clases invertibles no son ahora todas las no nulas, 
 sino las clases de enteros
 $[k]$ tales que $k$ es primo con $m$. ?`Por qu\'e? 	
 
-?`C\'omo se modifican los resultados, para m\'odulo primo,  anteriores para el
+?`C\'omo se modifican los resultados  anteriores, v\'alidos para m\'odulo primo, en el
 caso
 de m\'odulo compuesto?
 
@@ -163,12 +223,35 @@ de m\'odulo compuesto?
 su propio inverso para la multiplicaci\'on, es decir, clases $[a]$ tales que
 $[a]\cdot [a]=[1]$.  Utiliza el programa para tratar de caracterizar esas clases
 en t\'erminos de la factorizaci\'on de $m$ como producto de primos.
-
-
-
- 
- \end{enumerate}
+\end{enumerate}
 \end{ejer}
+
+\label{orden}
+Utilizando ahora el lenguaje de la primera secci\'on podemos enunciar
+
+\begin{enumerate}
+	\item Cuando $p$ es un entero primo $\mathbb{Z}_p$ es, gracias al  \hyperref[bezout]{teorema de Bezout}, un cuerpo. El conjunto de sus elementos no nulos $\mathbb{Z}_p^*$ es un grupo abeliano respecto al producto de orden $p-1$. El {\bf teorema peque\~no de Fermat} afirma que  todo elemento en $\mathbb{Z}_p^*$ elevado a $p-1$ resulta ser $[1]$. Es consecuencia de que, por el de Lagrange,  el orden de todo elemento es un divisor de $p-1$. 
+	
+	\item Para m\'odulos compuestos $m$, el anillo $\mathbb{Z}_m$ no puede ser un cuerpo porque hay elementos no nulos, las clases de los factores de $m$, cuyo producto es nulo. Sin embargo, hay un grupo de elementos invertibles, que podemos denotar mediante $U(m)$, formado por todos los elementos de $\mathbb{Z}_m$ que tienen un inverso para el producto y que, al menos, contiene a los elementos $[\pm 1]$. 
+	
+	\item Gracias al  \hyperref[bezout]{teorema de Bezout} podemos ver que son invertibles las clases de todos los enteros que son primos con el m\'odulo $m$. Se denota mediante $\phi(m)$ el orden del grupo de $U(m)$ de invertibles m\'odulo $m$. 
+	
+	El {\bf teorema de Fermat-Euler} afirma que {\itshape  todo elemento de $U(m)$ elevado al exponente $\phi(m)$ da como resultado $[1]$,} y como el teorema peque\~no de Fermat es consecuencia del de Lagrange.
+	
+	\item El orden del grupo $U(m)$ se puede calcular en {\sage} mediante \lstinline|euler_phi(m)|, y, si conocemos la factorizaci\'on de $m$ se puede calcular mediante la f\'ormula
+	
+	\[\phi(m)=m\prod_{p\mid m}\left(1-\frac{1}{p} \right), \]
+	
+	\noindent con el producto recorriendo los divisores primos $p$ de $m.$ 
+	
+\end{enumerate}
+
+
+Hemos utilizado estos resultados al resolver el  \hyperref[pr-ej8]{ejercicio 8} del cap\'{\i}tulo anterior.
+
+
+
+
 
 \section{Fibonacci}\label{fibon}
 
@@ -505,7 +588,8 @@ $k$ cifras''.}
 
 \section{N\'umeros primos}\label{primos}
 
-Un n\'umero $p>1$ es primo si sus \'unicos divisores son $\pm 1$ y $\pm p$. Uno
+Un n\'umero $p>1$ es primo si sus \'unicos divisores son $\pm 1$ y $\pm p$
+\footnote{Esta es la definici\'on que se usa habitualmente en la ense\~nanza preuniversitaria, pero no es del todo correcta. Lo definido por ella es lo que llamamos {\bf elemento irreducible} en un anillo, mientras que la definici\'on correcta de {\bf primo} afirma que {\itshape un elemento de un anillo es primo si cada vez que divide a un producto de dos elementos divide a uno de los factores}. En el anillo de los enteros las dos nociones coinciden, pero no es cierto en general que los elementos primos sean los mismos que los irreducibles en todo anillo.}. Uno
 de los teoremas fundamentales, ya conocido por Euclides, afirma que {\itshape
 todo entero $\ge 2$ es el producto, \'unico salvo el orden, de un n\'umero
 finito de enteros primos}.
@@ -660,7 +744,7 @@ $p,p+4,p+6,p+10,p+12,p+16,p+22$ sean todos primos.
  
  \item{\sc Primos como valores de polinomios }:
  \begin{enumerate}
- \item ($^*$) Dirichlet demostr\'o que los polinomios  $an+b$, verificando
+ \item ($^*$) Dirichlet demostr\'o que los polinomios  $an+b$, con
 $MCD(a,b)=1$, toman infinitos valores primos, es decir, {\itshape
  hay infinitos primos en las  progresiones aritm\'eticas en las que no todos los
 elementos son m\'ultiplos de un entero $d$.}
@@ -834,3 +918,103 @@ de base $b$}?
 
 \end{ejer}
 
+\section{Ejercicios}
+
+\begin{ejer}
+La congruencia de Wilson afirma que para todo número primo $p$ se verifica que el factorial de $p-1$ es congruente con $-1$ módulo $p$. Es interesante que el recíproco también es cierto: si un entero $n$ verifica la congruencia de Wilson entonces es primo, y por tanto la congruencia de Wilson puede servir como un criterio de primalidad.
+
+El método más simple, pero no el más eficiente,  para determinar si un número $n$ es primo es la criba de Eratóstenes, es decir,  $n$ es primo si después de cribar la lista de enteros entre $2$ y $n$, ambos inclusive, $n$ está todavía en la lista cribada. Se reproduce un c\'odigo de criba a continuaci\'on:  
+
+\begin{lstlisting}
+def criba(n):
+'''n al menos 2'''
+	aux = [True]*int(n)
+	aux[0] = False
+	aux[1] = False
+	for i in xrange(2,floor(sqrt(n))+1):
+		if aux[i]:
+			for j in xrange(i*i,n,i):
+				aux[j] = False
+	return [k for k in xrange(n) if aux[k]==True]
+\end{lstlisting}	
+
+
+
+
+
+En este ejercicio debes comparar, en términos de eficiencia,  la criba con el criterio de Wilson como método para decidir si un entero $n$ es primo, es decir, debes producir  evidencia que demuestre, suficientemente, cuál de los dos métodos es mejor.	
+	\end{ejer}
+	
+	\begin{ejer}
+	En este ejercicio estudiamos diversos métodos para calcular el número binomial $\binom{n}{m}$, que por definición es el entero $$\binom{n}{m}:=\frac{n!}{m!(n-m)!},$$ y cuenta el número de subconjuntos con $m$ elementos de un conjunto de $n$ elementos. 
+
+	\begin{enumerate}
+	\item  Un primer método,  que usaremos como base para nuestras comparaciones, consiste en usar la definición anterior
+	directamente, es decir, calculando los factoriales y realizando las operaciones indicadas. Define una función de SAGE de nombre $binomial\_1(n,m)$ y que devuelva el binomial calculado de esta manera. 
+	
+	\item  El cálculo anterior se puede organizar mejor: simplificamos $(n-m)!$ con parte de $n!$ y utilizamos que queda el mismo número de factores en el numerador que en el denominador para calcular el binomial más eficientemente. Define una función de SAGE de nombre $binomial\_2(n,m)$ y que devuelva el factorial calculado de esta manera. 
+	
+	\item  Otra manera de calcular el binomial es la base del {\bf triángulo de Tartaglia}, es decir, las relaciones 
+	$$\binom{n}{0}=\binom{n}{n}=1;\binom{n}{m}=\binom{n-1}{m-1}+\binom{n-1}{m},$$
+	que permitirían una definición recursiva del binomial. NO se pide esta solución recursiva, que no sería nada eficiente,  sino una iterativa equivalente. Define una función de {\sage}  de nombre $binomial\_3(n,m)$ que utilice bucles y las relaciones anteriores para calcular el binomial. En cierto sentido este programa haría  lo mismo que cuando calculamos el triángulo de Tartaglia a mano. Debes tener especial cuidado con el uso de la RAM. 
+	\item Compara la eficiencia de los tres programas,  tratando de decidir, de forma concluyente, cuál es mejor. 
+	\end{enumerate}	
+		
+	\end{ejer}	
+	
+	
+	\begin{ejer}
+		
+		Estudiamos una manera, que esperamos sea  eficiente,  de calcular factoriales basada en el siguiente teorema:
+		
+		{\itshape Dados un entero $n$ y un primo $p\le n$ el exponente de $p$ en la factorización de $n!$ en producto de primos es el entero $$exponente(p):=\sum_{i=1}^{i=\infty} floor(n/p^i).$$}
+		
+		Observa que la suma es en realidad finita, ya que en cuanto $p^i$ supera a $n$ los sumandos son todos cero, y para todos los primos $p\le n$ el exponente correspondiente es al menos $1$.
+	
+		\begin{enumerate}
+		\item Define una función que reciba el entero $n$ como argumento y devuelva una lista de pares con el primer elemento de cada par uno de los primos $p\le n$  y el segundo el exponente que corresponde a $p$ de acuerdo al teorema mencionado. 
+		
+		\item Define una función de nombre $factorial\_(n)$ que en primer lugar llame a la función del apartado anterior, y luego calcule el producto de todos los primos elevado cada uno a su exponente. El resultado debe ser el factorial de $n$. Para elevar cada primo a su exponente debe usarse el algoritmo eficiente visto en \hyperref[potencias]{el cap\'{\i}tulo anterior}. 
+		
+		\item  Compara  sistemáticamente los tiempos de ejecución del factorial de {\sage} y del tuyo.¿Qué conclusión sacas?
+		
+			\end{enumerate}
+		
+		\end{ejer}
+		
+		\begin{ejer}
+			Decimos que un entero positivo $n$ es {\bf multiplicativamente perfecto} si el producto de todos los divisores de $n$ vale exactamente $n^2.$ El ejemplo m\'as sencillo de un n\'umero multiplicativamente perfecto es el producto $n=p\cdot q$ de dos primos distintos y, por tanto, existen infinitos enteros multiplicativamente perfectos. Queremos caracterizarlos.
+			\begin{enumerate}
+			\item Primero define una funci\'on de {\sage}, de nombre $perfecto(n)$, que reciba como argumento un entero $n$ y devuelva \lstinline|True| o \lstinline|False| seg\'un el n\'umero $n$ sea multiplicativamente perfecto o no.
+			\item Ahora define una funci\'on de {\sage}, de nombre $perfectos(N)$, que reciba como argumento un entero $N$ y devuelva la lista de todos los enteros multiplicativamente perfectos que pertenecen al intervalo $[1,N].$
+			\item Usando las listas de enteros multiplicativamente perfectos que puedes obtener con la funci\'on del apartado anterior, produce una conjetura razonable acerca de qu\'e enteros son multiplicativamente perfectos. 
+			\item Define una tercera funci\'on, de nombre $comprobar(N)$, que devuelva \lstinline|True| si tu conjetura es correcta para enteros positivos menores que $N$, y \lstinline|False| si no lo es.
+			\item Experimenta con valores de $N$ suficientemente grandes para obtener el $N=10^t$ ($t$ entero) m\'as grande tal que tu programa $comprobar(N)$ se ejecuta en menos de un minuto.
+		\end{enumerate}
+			
+			\end{ejer}
+			
+			
+			\begin{ejer}
+			En este ejercicio estudiamos la existencia de ra\'{\i}ces $k$-\'esimas en el anillo $\mathbb{Z}_m$ de clases de restos m\'odulo un entero $m$. Como es natural, dados elementos $a,b\in \mathbb{Z}_m$, decimos que $a$ es una ra\'{\i}z $k$-\'esima de $b$ si $a^k=b$ en $\mathbb{Z}_m$. Nuestro objetivo es, dado el entero $m$,  determinar los valores de $2\le k\le m$ tales que todos los elementos de $\mathbb{Z}_m$ tienen una ra\'{\i}z $k$-\'esima.
+				\begin{enumerate}
+				\item Define una funci\'on de {\sage}, con nombre $raices(m,k)$, que devuelva \lstinline|True| si todas las clases de restos m\'odulo $m$ tienen una ra\'{\i}z $k$-\'esima, con $2\le k\le m$, y \lstinline|False| en caso contrario.
+				\item Aplica la funci\'on $raices(m,k)$ con $m$ primo, por ejemplo $m=23$, y trata de entender (explicita una conjetura) cu\'ales son los valores de $k$ para los que se obtiene \lstinline|True|.
+				
+				\item Define una nueva funci\'on de {\sage}, $comprobador(N)$,  que sirva para comprobar si tu conjetura es cierta para todos los enteros primos del intervalo $[1,N].$ Mediante esta funci\'on comprueba tu conjetura hasta el $N=10^t$ ($t$ entero) m\'as grande tal que la comprobaci\'on tarde menos de un minuto.
+				
+				\item Si todav\'{\i}a tienes  ganas puedes estudiar el caso de enteros $m$ que son producto de dos primos distintos.
+				\end{enumerate}
+				
+				
+				
+				\end{ejer}
+				
+				\begin{ejer}
+					
+					
+					
+					
+					
+					\end{ejer}
+		

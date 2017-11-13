@@ -111,8 +111,8 @@ vista pr\'actico, y dentro de este curso, que no es uno de C\'alculo
 Num\'erico, podemos decir que las cifras del resultado de un c\'alculo que se
 mantienen al incrementar la precisi\'on {\itshape deber\'{\i}an ser correctas.}
 
-En la hoja de {\sage} \href{http://sage.mat.uam.es:8888/home/pub/17/}{\tt
-71-APROX-ejemplos.sws} se muestran algunos ejemplos\footnote{Tomados
+En la hoja de {\sage} \href{http://localhost:8888/notebooks/APROX/71-APROX-ejemplos.ipynb}{\tt 71-APROX-ejemplos.ipynb}
+ se muestran algunos ejemplos\footnote{Tomados
 esencialmente del libro de N.J Highman {\itshape Accuracy and stability of
 numerical algorithms}.} de los errores que se pueden producir al tratar con
 aproximaciones de n\'umeros reales.
@@ -428,6 +428,7 @@ $x=b$) y compara la eficiencia de los dos m\'etodos.
 Hemos visto un m\'etodo, debido a Euler, para aproximar $\pi$. En este
 ejercicio consideramos otro, mucho
 m\'as reciente y debido a S. Ramanujan.
+
 \begin{ejer}
 
 \begin{enumerate}
@@ -503,11 +504,12 @@ Definimos
 
 \begin{lstlisting}
 def F(m):
+	'''Lineas que terminan en \ continuan en la siguiente'''
     A = 545140134
     B = 13591409
     C = 640320
-    return
-((-1)^m*(factorial(6*m))*(A*m+B))/(factorial(3*m)*(factorial(m)^3)*(C^(3*m)))
+    return ((-1)^m*(factorial(6*m))*(A*m+B))/ \
+		    (factorial(3*m)*(factorial(m)^3)*(C^(3*m)))
  
 def pi_chudnovski(ndigits):
     k = 0
@@ -520,10 +522,18 @@ def pi_chudnovski(ndigits):
     return (426880*sqrt(10005).n(d${}$igits=ndigits))/S,k
 \end{lstlisting}
 
-Estudia con cuidado este programa y, en particular, explica el uso de 
-\lstinline|while 1: $\dots$ if $\dots$ :break|. ?`Cu\'al es la justificaci\'on
+Estudia con cuidado este programa y, en particular, 
+\begin{enumerate}
+	\item Explica el uso de 
+	\lstinline|while 1: $\dots$ if $\dots$ :break|.
+\item ?`Cu\'al es la justificaci\'on
 de la condici\'on de
-parada  \lstinline|floor(abs(10^ndigits*F(k))) == 0|?
+parada  
+\begin{center}
+	\lstinline|floor(abs(10^ndigits*F(k))) == 0|
+\end{center}
+
+\end{enumerate}
 
 El programa anterior no es muy eficiente, pero admite muchas mejoras. La primera
 consiste en observar que si escribimos 
@@ -560,17 +570,22 @@ ejecutar las siguientes l\'{\i}neas en una terminal para ver un tal programa en
 acci\'on:
 \begin{lstlisting}[basicstyle=\color{black},language={C},backgroundcolor=\color{
 LightYellow},numbers=left,linewidth=.99\textwidth]
-gcc ~/Desktop/SAGE-noteb/bin/gmp-chudnovsky.c -lgmp -lm -O2 -o  ~/Desktop/pi-chudnovsky 
+gcc ~/Desktop/SAGE-noteb/bin/gmp-chudnovsky.c \
+         -lgmp -lm -O2 -o  ~/Desktop/pi-chudnovsky 
 chmod +x ~/Desktop/pi-chudnovsky
 ~/Desktop/pi-chudnovsky 10000000 1 > ~/Desktop/pi-diez-millones.txt
 \end{lstlisting}
 
+\begin{ejer}
+	Modifica el programa obtenido en el ejercicio anterior usando \lstinline|cython| y \lstinline|numpy| y compara la eficiencia del programa resultante con la de {\tt gmp-chudnovsky.c}.
+	
+	?`Hasta qu\'e punto  \lstinline|cython|+\lstinline|numpy| se acerca a C?
+	\end{ejer}
 
+%%?`Por qu\'e es mucho m\'as eficiente un programa escrito en $C$ que el%%
+%%equivalente en Python?
 
-?`Por qu\'e es mucho m\'as eficiente un programa escrito en $C$ que el
-equivalente en Python?
-
-%\href{http://localhost:8080/home/admin/5/}{HOJA}.
+%\href{http://localhost:8080/home/admin/5/}{HOJA}.%%
 
 
 \subsection{Rabinowitz y  Wagon (1995)}
@@ -664,7 +679,9 @@ def F0(j,m):
     k =0 
     while k <= m:
         r = 8*k+j
-        S+=RR(power_mod(16,n-k,r)/r)-floor(RR(power_mod(16,n-k,r)/r))        k += 1
+        S+=RR(power_mod(16,n-k,r)/r)- \
+	        floor(RR(power_mod(16,n-k,r)/r))        
+        k += 1
     return RR(S)  
  
 def F1(j,m):
@@ -685,7 +702,8 @@ def S(j,m):
     return RR(F0(j,m)+F1(j,m))
 def cifra_pi(n):
     n -= 1
-    x = (4*RR(S(1,n))-2*RR(S(4,n))-RR(S(5,n))-RR(S(6,n)))
+    x = (4*RR(S(1,n))-2*RR(S(4,n))-RR(S(5,n))- \
+		    RR(S(6,n)))
     return (x-floor(x)).str(base=16)
 \end{lstlisting}
 
@@ -718,8 +736,8 @@ independientemente de lo grande que sea $n$. La~cantidad de memoria RAM que usa
 el programa es 
 muy reducida porque se reutiliza todo el tiempo la misma memoria.
 
-\item Es posible obtener un rendimiento mucho mayor del algoritmo
-program\'andolo en C, o usando \hyperref[cython]{Cython.} 
+\item Debe ser  posible obtener un rendimiento  mayor del algoritmo
+pro\-gra\-m\'an\-do\-lo en C, o usando \lstinline|cython|.
 %%%%%%ERRORES EN LA VERSION ACTUAL EN CYTHON 07-06-2013%%%%%%%%%%
 
 \end{enumerate}
@@ -828,10 +846,11 @@ tarda   $100$ segundos.
 %\href{http://localhost:8080/home/admin/?/}{HOJA}.
 
 
-\section{Fracciones Continuas}
-\def\floor#1.{\lfloor #1\rfloor}
+\section{Fracciones continuas} 
 
-\noindent\textbf{Las fracciones continuas aparecen al dividir. } Consideramos la
+\subsection{Las fracciones continuas aparecen al dividir} 
+
+Consideramos la
 fracci\'on $\frac{55}{43}$. Al aplicar el algoritmo de Euclides para calcular el
 m\'aximo com\'un divisor de 55 y 43, obtenemos como pasos intermedios las
 expresiones
@@ -852,6 +871,7 @@ $$
 \begin{array}{l}
 \frac{55}{43}=1+\frac{12}{43}=1+\frac1{\frac{43}{12}}=1+\frac1{3+\frac7{12}}
 =1+\frac1{3+\frac1{1+\frac57}}=1+\frac1{3+\frac1{1+\frac1{2+\frac25}}}
+=\\
 =1+\frac1{3+\frac1{1+\frac1{1+\frac1{2+\frac12}}}}.
 \end{array}
 $$
@@ -884,7 +904,8 @@ $a_n>1$, entonces la representaci\'on de un n\'umero racional como fracci\'on
 continua es \'unica.
 
 
-\noindent\textbf{Las fracciones continuas aparecen al resolver ecuaciones. }
+\subsection{Las fracciones continuas aparecen al resolver ecuaciones }
+
 Consideramos la ecuaci\'on $x^2-x-1=0$. Su \'unica soluci\'on positiva es la
 raz\'on \'aurea, $\Phi=\frac{1+\sqrt{5}}2$. Podemos reescribir $\Phi^2-\Phi-1=0$
 como $\Phi=1+\frac1\Phi$. Sustituyendo la $\Phi$ del denominador por
@@ -904,7 +925,7 @@ que dar sentido al lado derecho de la expresi\'on, a la fracci\'on continua
 infinita. 
 
 
-\noindent\textbf{Fracciones continuas infinitas. Convergentes. } 
+\subsection{Fracciones continuas infinitas} 
 Sea $a_0$ un entero arbitrario (positivo, negativo o cero),  y
 $\{a_j\}_{j=1}^\infty$, una sucesi\'on de enteros positivos. 
 Llamamos $n$-\'esimo convergente de la fracci\'on continua infinita (simple)
@@ -981,8 +1002,9 @@ $$
 $$ 
 
 
-\noindent\textbf{Algoritmo can\'onico para obtener la fracci\'on continua de un
-n\'umero irracional. } ?`C\'omo construir la expansi\'on en fracciones continuas
+\subsection{Algoritmo can\'onico}
+
+ ?`C\'omo construir la expansi\'on en fracciones continuas
 de un n\'umero real? Ya sabemos c\'omo hacerlo para n\'umeros racionales; el
 mismo m\'etodo, interpretado adecuadamente, funcionar\'a para irracionales, de
 manera que vamos a revisarlo. 
@@ -1098,8 +1120,9 @@ y otro trascendente, para al menos las cuatro primeras aproximaciones~$c_k$.
 \end{ejer}
 
 
-\section{Fracciones continuas periódicas. Números irracionales cuadráticos}
-%Quadratic irrationals and periodic continued fractions
+\section{Fracciones continuas periódicas}
+
+
 Sabemos que, entre los números reales, solo los racionales tienen un desarrollo decimal periódico. Podemos preguntarnos qué hay sobre este asunto en los desarrollos en fracción continua: ¿qué reales tienen fracciones continuas periódicas?
 
 Hemos visto ya algún ejemplo, la razón áurea con desarrollo
@@ -1109,16 +1132,20 @@ $$
 que denotaremos como $[\,\overline 1\,]$ para indicar que el $1$ se repite.
 
 Si tomamos la raíz cuadrada de $8$ se llega a $\sqrt8=[2;1,4,1,4,...]=[2;\overline{1,4}]$, donde tenemos que se repite indefinidamente el bloque $1,4$. En efecto, $\lfloor\sqrt8\rfloor=2$ de manera que:
+
 \begin{align*}
 \sqrt8=\destaca2+(\sqrt8-2) \text{ con }\sqrt8-2<1\\
 \frac1{\sqrt8-2}=\frac{\sqrt8+2}{8-4}=\frac{\sqrt8+2}{4}
-&\text{ donde } 1<\tfrac{\sqrt8+2}{4}<2\\
-&\text{ y así }\frac{\sqrt8+2}{4}=1+\left(\tfrac{\sqrt8+2}{4}-1\right)=
+\text{ donde } 1<\tfrac{\sqrt8+2}{4}<2 \text{ y así }\\
+\frac{\sqrt8+2}{4}=1+\left(\tfrac{\sqrt8+2}{4}-1\right)=
 \destaca1+\frac{\sqrt8-2}{4}
 \text{ con }\tfrac{\sqrt8-2}{4}<1\\
 \frac1{\frac{\sqrt8-2}4}=\frac{4(\sqrt8+2)}{8-4}=\sqrt8+2=\destaca4+(\sqrt8-2)
 &\text{ con }\sqrt8-2<1\,.
 \end{align*}
+
+
+
 Y hemos llegado a un valor ya antes visitado en el algoritmo: $\frac1{\sqrt8-2}=\dots$
 
 Antes de ver cómo recuperar $\sqrt8$ a partir de esta fracción continua, veamos otro ejemplo, esta vez con periodo puro. Desarrollemos nuestro algoritmo para $\sqrt7+2$:
@@ -1139,15 +1166,16 @@ Podemos recuperar este último valor a partir de la expresión $[\,\overline{4,1
 x=[4,1,1,1,x]\,.\label{ec-1}
 \end{equation}
 Desarrollando el miembro derecho se obtiene
-$$
+\begin{align*}
 [4,1,1,1,x]=\destaca4+\frac1{\destaca1+\frac{1}{\destaca1+\frac{1}{\destaca1+\frac1x}}}
 =
 \destaca4+\frac1{\destaca1+\frac{1}{\destaca1+\frac{x}{x+1}}}
 =
 \destaca4+\frac1{\destaca1+\frac{x+1}{2x+1}}
-=
-\destaca4+\frac{2x+1}{3x+2}=\frac{14x+9}{3x+2}\,.
-$$
+=\\=
+\destaca4+\frac{2x+1}{3x+2}=
+\frac{14x+9}{3x+2}\,.
+\end{align*}
 La ecuación \eqref{ec-1} es por tanto una ecuación cuadrática:
 $$ x= \frac{14x+9}{3x+2} \,\,\longleftrightarrow\,\,3x^2-12x-9=0$$
 y su raíz positiva, $\frac{12+\sqrt{144+108}}6=2+\sqrt7$, es el número buscado.
@@ -1383,7 +1411,8 @@ base $b$, obtenemos
 
 Teniendo en cuenta que $C$ es un d\'{i}gito en base $b$, 
 vemos que la parte entera por defecto de  $b^{\log_b(N)-k}$ determina $C$.
- \item La utilidad de este resultado radica en que hace posible calcular la cifra dominante de un entero $N$ de la forma $a^ n$, de manera muy eficiente y  sin calcular $N$. 
+ \item La utilidad de este resultado radica en que hace posible calcular 
+ la cifra dominante de un entero $N$ de la forma $a^ n$, de manera muy eficiente y  sin calcular $N$. 
  \item Ya usamos, en el ejercicio \ref{fib-log} del cap\'{\i}tulo \ref{tn1},
 logaritmos para calcular el $n$ que corresponde a un n\'umero de Fibonacci $F_n$
 dado.
@@ -1422,8 +1451,11 @@ podamos llegar a verlos, o simplemente que perdamos la paciencia y paremos el
 programa.
 
 Para una soluci\'on ver la hoja 
-\href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt
-79-APROX-gelfand.sws}.
+\href{http://localhost:8888/notebooks/APROX/79-APROX-gelfand.ipynb}{\tt
+	79-APROX-gelfand.ipynb}.
+
+
+
 
 \end{ejer}
 
@@ -1966,9 +1998,90 @@ La Enciclopedia permite identificar sucesiones  de enteros, no
 s\'olo de d\'igitos, como por ejemplo, la sucesi\'on de Fibonacci y es
 enormemente \'util al realizar {\itshape experimentos matem\'aticos.}
 \end{enumerate}
-
-
- 
- 
- 
  \end{ejer}
+ 
+\begin{ejer}
+	
+	Define funciones $H(n,nbits)$ y $H2(n,nbits)$ que devuelvan la suma $\sum_{k=1}^{k=n} \frac{1}{k}$ calculada con precisi\'on igual a $nbits$. Las dos funciones ser\'an esencialmente iguales, pero $H$ realizar\'a todos los c\'alculos con n\'umeros decimales de la precisi\'on fijada mientras que $H2$ debe efectuar los c\'alculos con racionales, y \'unicamente al devolver el resultado debe convertir a decimal de $nbits$ de precisi\'on. ?`Qu\'e ense\~na este ejemplo?
+	\end{ejer}
+
+\begin{ejer}
+	
+	Sabemos que la serie $\sum_{k=1}^{k=\infty} \frac{1}{k}$ es divergente. Adem\'as, sabemos que sus sumas parciales $H_n:=\sum_{k=1}^{k=n} \frac{1}{k}$ tienen un valor no muy diferente a $log(n)$ (logaritmo neperiano siempre) ya que
+	\[\int_1^x \frac{1}{t}dt=log(x),\]
+	y $H_n$ es una suma de Riemann de esta integral con los puntos de la partici\'on con coordenadas enteras. Podemos entonces decir que la serie diverge (aproximadamente) como el logaritmo.
+	
+	Euler defini\'o la constante
+	\[\gamma:=\lim_{n\to \infty}(H_n-log(n)),\]
+	\noindent cuya existencia nos indica que la diferencia entre $H_n$ y el logaritmo de $n$ no crece con $n$. {\sage} dispone de un procedimiento, $euler\_gamma$, para calcular con la precisi\'on que queramos la constante de Euler.
+	\begin{enumerate}
+
+	\item  Define una funci\'on, $mi\_gamma1(n,nbits)$, que calcule el t\'ermino $n$-\'esimo de la sucesi\'on que define $gamma$ con $nbits$ de precisi\'on.
+	\item  Define una funci\'on, $mi\_gamma2(n,nbits)$, que calcule 
+	\[\gamma_n:= \sum_{k=1}^{k=n} \frac{1}{n}\left(\left\lceil \frac{n}{k}\right\rceil -\frac{n}{k}\right)\] 
+	\noindent con $nbits$ de precisi\'on. La notaci\'on $\lceil x\rceil$ indica la parte entera por exceso de $x$. El l\'{\i}mite, cuando $n$ tiende a infinito, de $\gamma_n$ se sabe que es $\gamma$.
+	\item  Define una funci\'on, $mi\_gamma3(n,nbits)$, que calcule $gamma$ sumando $n$ t\'erminos de la serie 
+	\[\sum_{k=1}^{k=\infty} \left(\frac{1}{k}-log(1+\frac{1}{k})\right),\] 
+	\noindent que tambi\'en converge a $\gamma.$
+\item  Compara  la cantidad de cifras correctas obtenidas y los tiempos de c\'alculo para los tres m\'etodos usando $n=10^6$ y  fijando la precisi\'on \'optima mediante experimentaci\'on. ?`Qu\'e conclusiones obtienes y cu\'al puede ser el motivo?
+\end{enumerate}
+\end{ejer}
+
+
+\begin{ejer}
+	
+	Se define la funci\'on $\sigma(n)$ como la suma de todos los divisores positivos del entero positivo $n$. {\sage} dispone de la funci\'on $sigma$ que realiza este c\'alculo. Determina (experimentalmente) el mayor entero positivo tal que la diferencia
+	
+	\[e^\gamma\cdot n \cdot log(log(n))-\sigma(n),\]
+	\noindent es negativa ($\gamma$ es la constante de Euler).
+	\end{ejer}
+
+
+\begin{ejer}
+
+	Definimos una sucesi\'on de n\'umeros racionales mediante
+	\[G_1=0,\ G_2=1,\ G_n=G_{n-1}+\frac{1}{n-2}G_{n-2} \ (n\ge 3).\]
+	\begin{enumerate}
+	\item  Comprueba (experimentalmente) que la fracci\'on $\frac{n}{G_n}$ tiende al n\'umero $e$.
+	\item  Compara la eficiencia de esta manera de aproximar $e$ con la de la forma, m\'as conocida,  que utiliza la serie 
+	\[e=\sum_{n=0}^{n=\infty}\frac{1}{n!}.\]
+	\end{enumerate}
+	\end{ejer}
+
+
+ \begin{ejer}
+ 	
+ 	Podemos estimar el valor de $\alpha(x):=\sqrt{1+x}$ como $\beta(x):=1+(x/2)$ cuando $x$ es,  en valor absoluto,  suficientement próximo a cero. Consideramos que la estimación {\itshape es aceptable} cuando  el error relativo $$E(x):=\frac{abs(\alpha(x)-\beta(x))}{\alpha(x)}$$ que cometemos es menor que $0.01$. 
+ 	\begin{enumerate}
+ 	\item Determina, experimentalmente,  una cota $\vert x\vert < A$ tal que la estimación es aceptable para los $x$ que la cumplen, y deja de serlo para $\vert x\vert \ge A$. 
+ 	
+ 	\item ?`Qué podemos hacer para mejorar la estimación? Postula una nueva estimación $\beta_1(x)$ y demuestra que con ella se obtienen resultados bastante más precisos.
+ 	\end{enumerate}
+ 	\end{ejer}
+ 	
+ 	\begin{ejer}
+ 	
+ 	John Napier publicó su invención de los logaritmos en 1614, mucho antes de la invención del cálculo diferencial. El punto esencial para que los logaritmos fueran útiles era la existencia de {\bf tablas de logaritmos} en las que uno encontraba los logaritmos de los factores, que sumaba a mano, y volvía a usar para encontrar el número cuyo logaritmo era la suma obtenida, es decir,  el producto de los números de partida. 
+ 	Henry Briggs colaboró con Napier para producir las primeras tablas de logaritmos mediante el siguiente procedimiento:
+ 	
+ 	\begin{enumerate}
+ 	\item Queremos calcular el logaritmo de un entero $n>1$. Calculamos $n^{1/2^K}$ para $K=1,2,3,\dots$ hasta que el resultado difiera muy poco de $1$. Esto es lo mismo que iterar la extracción de raíces cuadradas hasta llegar casi a $1$. Escribimos 
+ 	$$n^{1/2^K}=1+x.$$
+ 	
+ 	\item  Ahora tomamos logaritmos para obtener 
+ 	$$log(n)=2^Klog(1+x).$$
+ 	
+ 	\item  Finalmente, Briggs observó que para $x$ suficientemente pequeño en valor absoluto, podía sustituir $log(1+x)$ por $x$, y quedaba $log(n)$ aproximadamente igual a  $2^Kx.$ 
+ 	\end{enumerate}
+ 	Es claro que lo que necesitamos es saber {\bf cómo de pequeño tiene que ser $x$ para obtener un número prefijado $k$ de cifras decimales exactas del logaritmo de $n$.}
+ 	\begin{enumerate}
+ 	\item  Define una función $buscar(n,k,precis)$ que debe efectuar el procedimiento de Briggs hasta que la estimación obtenida tenga el número $k$ de cifras correctas de $log(n)$, y en ese momento debe devolver $x$. La precisión arbitraria en los cálculos hace falta porque sin ella un cierto bucle \lstinline|while| puede hacerse infinito cuando $n$ o $k$ son grandes. 
+ 	
+ 	\item  Experimenta con la función del primer apartado y, como consecuencia,  enuncia y comprueba la regla que indica cómo de pequeño tiene que ser $x$ para obtener $k$ cifras correctas del logaritmo de $n$.	
+ 		\end{enumerate}
+ 		
+ 		
+ 		\end{ejer}
+ 		
+ 		
+ 	

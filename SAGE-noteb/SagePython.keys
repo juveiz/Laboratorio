@@ -13,7 +13,7 @@ Combinations,ComplexField,%
 csc,csch,coordinates,cos,cosh,cot,coth,count,%
 cProfile,cross_product,cython,%
 degree,derivative,det,dict,digits,dim,divisors,dot,dot_product,double,%
-e,echelon_form,echelonize,%
+e,echelon_form,echelonize,euler_phi,%
 exact_rational,expand,expand_log,expand_rational,expand_trig,extend,%
 factor,factorial,fibonacci,finance,find,find_root,floor,forget,%
 gcd,get_memory_usage,GF,
@@ -25,13 +25,13 @@ is_prime,items,%
 join,%
 keys,%
 lagrange_polynomial,left,left_hand_side,lhs,len,%
-limit,line2d,line3d,line,list,log,%
-matrix,min,max,meshgrid,%
+limit,line2d,line3d,line,list,log,lprun,%
+matrix,min,max,meshgrid,mprun,%
 N,n,negation,next,next_prime,norm,nth_prime,numerical_approx,numerical_integral,%
 parametric_plot,parametric_plot3d,parent,pairwise_product,Permutations,plot,%
 plot_histogram,plot3d,point,point2d,point3d,points,%
-polynomial,PolynomialRing,pop,prime_range,primes,print_stats,pstats,
-power_mod,%
+polynomial,PolynomialRing,pop,potencia_mod,prime_range,primes,print_stats,pstats,%
+power_mod,prun,Python,%
 QQ,QQbar,quo_rem,randint,random,RDF,RealField,%
 random_element,range,rank,remove,reverse,%
 right,right_hand_side,right_kernel,rhs,RR,rref,%

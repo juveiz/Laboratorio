@@ -1019,6 +1019,7 @@ del \lstinline|while|? ?`Por qu\'e?
 
 \end{enumerate}
 
+\begin{comment}
 \par
 \medskip
 \par
@@ -1030,7 +1031,7 @@ generales sobre la estructura de las \'orbitas, su longitud, etc. y de demostrar
 tus afirmaciones. 
 \end{ejer}
 
-
+\end{comment}
 
 \subsubsection{Collatz}
 
@@ -1267,12 +1268,13 @@ demu\'estralas formalmente. Para eso es importante entender c\'omo decrece un
 entero $N$, al aplicarle $F$, dependiendo de su n\'umero de d\'{\i}gitos.
 \end{enumerate} 
 
-\item Queremos estudiar las órbitas de la función $f(n):=n^2$ en el conjunto finito de clases de restos módulo $m$. En particular, queremos determinar las órbitas cerradas (también llamadas $ciclos$),  es decir, órbitas de elementos $n$ tales que aplicando repetidas veces $f$ volvemos a obtener el mismo  $n$. Puede haber ciclos que consistan en un único elemento $n$ tal que $f(n)=n,$ y decimos en este caso que $n$ es un punto fijo de $f$.
+\item \label{pr-ej8} Queremos estudiar las órbitas de la función $f(n):=n^2$ en el conjunto finito de clases de restos módulo $m$. En particular, queremos determinar las órbitas cerradas (también llamadas $ciclos$),  es decir, órbitas de elementos $n$ tales que aplicando repetidas veces $f$ volvemos a obtener el mismo  $n$. Puede haber ciclos que consistan en un único elemento $n$ tal que $f(n)=n,$ y decimos en este caso que $n$ es un punto fijo de $f$.
 \begin{enumerate}
  \item    Define una función de {\sage}  $ciclos(f,m)$ que devuelva una lista de todos los ciclos de $f$ en  el conjunto  de clases de restos módulo $m$, cada ciclo una lista de los enteros que forman parte del ciclo. En principio, no hay problema en que haya ciclos repetidos en la lista que devuelve tu función. 
   \item   Experimenta con los resultados de tu función, para diversos valores de $m$ primos y compuestos,  y trata de obtener conjeturas razonables sobre los ciclos de $f$.
-
 \end{enumerate}
+
+Al resolver este ejercicio conviene tener en cuenta las definiciones y resultados mencionados en las dos primeras secciones del cap\'{\i}tulo siguiente, y, en particular, todo lo que se refiere a la \hyperref[orden]{noci\'on de orden.} 
 
 \item Encontrar la condici\'on necesaria y suficiente sobre el entero $n$ para que $1+2+3+\dots+n$ divida exactamente a $n!.$ Una vez encontrada hay que intentar demostrar la equivalencia.
 
