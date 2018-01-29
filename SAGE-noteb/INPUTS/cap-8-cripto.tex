@@ -71,8 +71,9 @@ codificaci\'on que se us\'o para poder leerlo. En particular, la codificaci\'on
 no utiliza claves.
 
 Puedes ver varios ejemplos de codificaciones en la hoja de {\sage}
-\href{http://sage.mat.uam.es:8888/home/pub/21/}{\tt 81-CRIPT-codificacion.sws}
-
+\begin{center}
+\href{http://localhost:8888/notebooks/CRIPT/81-CRIPT-codificacion.ipynb}{\tt 81-CRIPT-codificacion.ipynb}.
+\end{center}
 \section{Criptoan\'alisis}
 
 Antes de pasar a describir en detalle algunos sistemas criptogr\'aficos conviene
@@ -138,7 +139,7 @@ an\'alisis de frecuencias de las letras en el texto encriptado y comparaci\'on
 con las frecuencias de las letras en la lengua del mensaje. 
 
 Veremos ejemplos de todo esto en la hoja de {\sage} 
-\href{http://sage.mat.uam.es:8888/home/pub/22/}{\tt 82-CRIPT-cesar-vigenere.sws}.
+\href{http://localhost:8888/notebooks/CRIPT/82-CRIPT-cesar.ipynb}{\tt 82-CRIPT-cesar.ipynb}.
  
  
  
@@ -223,12 +224,15 @@ $k$ suficientemente grande, podemos conseguir espacios de claves enormes a costa
 de complicar el mantenimiento o transmisi\'on de las claves. 
 
 Como veremos en las hoja de {\sage}
-\href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt 83-CRIPT-vigenere-frec.sws}
+\href{http://localhost:8888/notebooks/CRIPT/83-CRIPT-vigenere.ipynb}{\tt 83-CRIPT-vigenere.ipynb}
 el sistema de  Vigenere puede ser atacado, mediante an\'alisis de frecuencias, 
 si disponemos de suficiente texto encriptado, pero cuanto  mayor sea la 
 longitud 
 de la clave 
 necesitaremosmos m\'as cantidad de texto encriptado.
+
+
+
 
 \subsection{Cifrado matricial}
 
@@ -248,8 +252,7 @@ que
 $\mathbb{Z}_{26}^n$ no es un espacio vectorial, pero sigue siendo v\'alido que 
 una
 matriz $\mathbf{A}$ con entradas en 
- $\mathbb{Z}_{26}^n$ es invertible si y s\'olo si su determinante es distinto de
-cero.
+ $\mathbb{Z}_{26}^n$ es invertible si y s\'olo si su determinante es invertible en $\mathbb{Z}_{26}.$
 
 \begin{enumerate}
  \item Los mensajes se codifican letra a letra usando el mismo sistema que en
@@ -282,8 +285,8 @@ dobles, que,  al menos en las pel\'{\i}culas, siempre existen.}.
 
 
 En la hoja de {\sage} 
-\href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt 
-84-CRIPT-matricial-fuerzabruta.sws}
+\href{http://localhost:8888/notebooks/CRIPT/??}{\tt 
+84-CRIPT-matricial-fuerzabruta.ipynb}
 puedes encontrar un ejemplo de uso de este m\'etodo, usando matrices $2\times 
 2$, junto con un ataque mediante {\itshape fuerza bruta}, posible porque el 
 espacio de claves no es muy grande,  usando un diccionario. 
@@ -407,7 +410,7 @@ funci\'on que encripte y una que desencripte.
  \end{ejer}
 
  Puedes ver una soluci\'on en la hoja de {\sage} 
- \href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt 88-CRIPT-one-time-pad.sws}.
+ \href{http://localhost:8888/notebooks/CRIPT/??}{\tt 88-CRIPT-one-time-pad.ipynb}.
  
  \subsection{En resumen}
  
@@ -562,7 +565,7 @@ seguridad.
 
 Puedes ver una soluci\'on de este ejercicio en la hoja de {\sage}
 Puedes ver la soluci\'on en el archivo de {\sage}
-\href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt 85-CRIPT-rsa.sws}.
+\href{http://localhost:8888/notebooks/CRIPT/??}{\tt 85-CRIPT-rsa.ipynb}.
 
 \section{Otro sistema de clave p\'ublica: MH}
 
@@ -662,7 +665,7 @@ han propuesto algunas variantes que, de momento, se consideran seguras.
 Programar el encriptado y desencriptado usando este m\'etodo. 
 \end{ejer}
 Puedes ver una soluci\'on en la hoja de {\sage}
-\href{http://sage.mat.uam.es:8888/home/pub/??/}{\tt 87-CRIPT-mhellman.sws}.
+\href{http://localhost:8888/notebooks/CRIPT/??}{\tt 87-CRIPT-mhellman.ipynb}.
 
 \section{Firma digital}
 \begin{enumerate}
@@ -734,7 +737,13 @@ caracteres de un alfabeto formado por los s\'{\i}mbolos
 separador. En consecuencia, el entero $n$ de las claves p\'ublicas debe estar
 comprendido entre $16^{64}$ y $16^{65}$. 
 \item La clave p\'ublica del profesor es 
-\[n=713631423636250759802822662524882010142212499466855333247864128528383524853183,\]
+
+\parbox{10cm}{
+\begin{multline}\notag
+n=71363142363625075980282266252488201014221249946\\
+6855333247864128528383524853183,
+\end{multline}
+}
 \[e=268435457. \] 
  \end{enumerate}
 \end{ejer}
@@ -913,5 +922,46 @@ puede no conocer el PIN  porque para obtener $p$ y $q$ hay que factorizar $n$.
 
 Define una funci\'on que genere el par de primos $p$ y $q$ de tal forma que 
 {\sage} no pueda factorizar su producto en un tiempo  de, digamos, treinta 
-minutos. 
-\end{ejer}
+minutos. \end{ejer}
+
+\begin{ejer}
+	
+	Los elementos invertibles para el producto en $\mathbb{Z}_n$ forman un grupo  que habitualmente se denota por $\mathbb{Z}_n^*$. Su cardinal es $\phi(n)$, con $\phi$ la función de Euler, y sus elementos son las clases de restos con un representante primo con $n$. Supongamos que $n$ es un primo $p$, de forma que  $\phi(p)=p-1$, y se sabe que, en este caso,  $\mathbb{Z}_p^*$ es un grupo cíclico. Este ejercicio trata de encontrar generadores de $\mathbb{Z}_p^*$, mediante {\itshape fuerza bruta}, es decir, no usamos un algoritmo específico, sino que probamos distintos elementos, elegidos aleatoriamente, hasta que encontramos uno que es un generador.
+	
+	\begin{enumerate}
+	\item Define una función $generador(p)$ que primero compruebe si $p$ es primo, y si lo es devuelva un generador del grupo $\mathbb{Z}_p^*$. Por supuesto, no sirve usar una función predefinida en {\sage}  que ella misma calcule generadores. 
+	
+\item  Define una función $es\_generador(g,n)$ que devuelva \lstinline|True| si $g$ es un generador de $\mathbb{Z}_n^*$ y \lstinline|False| si no lo es. En este apartado,  y los siguientes, $n$ es un entero no necesariamente primo. 
+	
+	\item Define una función $es\_ciclico(n)$ que devuelva  \lstinline|True| si $\mathbb{Z}_n^*$ tiene algún generador, es decir, es cíclico, y \lstinline|False| si no existe generador. 
+	
+	\item Finalmente, ejecuta la función  $es\_ciclico(n)$ para $2\le n\le 100$, y enuncia la regla,  que puedas deducir del experimento,  sobre los valores de $n$, aparte de $n$ primo, para los que  $\mathbb{Z}_n^*$ tiene un generador.
+	
+\end{enumerate}	
+	\end{ejer}
+
+\begin{ejer}
+	
+	En este ejercicio construimos el sistema criptográfico de clave pública  {\bf El Gamal}, que utiliza de manera esencial  el ejercicio anterior. Para simplificar el ejercicio prescindimos de la fase de codificación y nos centramos en el encriptado y desencriptado. Los mensajes codificados van a ser enteros, o más bien clases de restos, y la codificación y descodificación serían similares a las utilizadas en RSA. 
+	
+\begin{enumerate}
+	\item  {\sc Claves}: La clave pública de Alice  está formada por tres enteros $(p,g,A)$ con $p$ un primo muy grande, $g$ un generador de $\mathbb{Z}_p^*$ y $A:=g^a\  mod\  p$,  con el exponente $1\le a\le p-2$ que ser\'a la clave privada de Alice, que ella elige  y mantiene en secreto. 
+	
+	\item  {\sc Encriptado}: Bob, que quiere encriptar un mensaje para Alice, codifica su mensaje como un entero $m$ módulo $p$, elige un exponente aleatorio $1\le b\le p-2$ y calcula $B:=g^b\  mod\  p$ y también $c:=A^b\cdot m \  mod\  p$. El mensaje encriptado es el par $(B,c).$ 
+	
+	\item  {\sc Desencriptado}: Alice recibe $(B,c)$ y define $x:=p-1-a$, lo que le permite recuperar $m$ como $B^x\cdot c \ mod\ p$.
+	
+	\end{enumerate}
+	
+	\begin{enumerate}
+	\item  Usaremos $p= nth\_prime(1000)$. Elige claves para Alice. Define una función $encripta(p,g,A,m)$ que devuelva $(B,c)$.
+	
+	\item  Define una función $desencripta(p,a,B,c)$, que devuelva el mensaje descifrado $m$, y comprueba que si se encripta el mensaje $m=randint(p//2,p-2)$ se recupera el mensaje $m$ al desencriptar.
+	
+	\item El exponente $a$ no cambia, mientras Alice no cambie sus claves tiene que usar siempre $a$ como clave privada, pero el exponente $b$  debe ser elegido aleatoriamente cada vez que Bob quiere encriptar un mensaje para Alice. Supongamos que  Bob encripta $m$ usando como exponente $b$, pero {\itshape el malo} consigue acceder a $m$ y a $c$. Posteriormente Bob encripta $m^{\prime}$ usando el mismo exponente $b$. Demuestra, mediante cálculos en $\mathbb{Z}_p$,  que si {\itshape el malo} intercepta $c^{\prime}$ puede calcular $m^{\prime}$ sin conocer $a$. 
+	
+	\end{enumerate}
+	
+	\end{ejer}
+	
+	
