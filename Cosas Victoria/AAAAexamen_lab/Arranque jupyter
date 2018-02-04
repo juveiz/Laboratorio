@@ -1,0 +1,11 @@
+Con truco
+/usr/local/anaconda2/bin/jupyter notebook
+
+Normal
+cd Desktop
+cd SAGE-noteb
+sage -notebook=jupyter
+
+
+
+

@@ -1,0 +1,1 @@
+En bandas.jpeg vemos que hay como ciertas estructuras, con líneas ya que están muy relaciondos los puntos con su anterior(xn+1 está muy relacionado con xn). Esto se puede apreciar en el generador de la primera imagen. En cambio, en la segunda imagen(generador de Sage, que es el mejor hasta ahora) no se ven ninguna estructura.
