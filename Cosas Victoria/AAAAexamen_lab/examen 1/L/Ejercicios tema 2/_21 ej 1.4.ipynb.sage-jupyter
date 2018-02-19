@@ -1,0 +1,6 @@
+{"kernelspec":{"display_name":"SageMath 7.3","language":"","name":"sagemath"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
+{"cell_type":"markdown","metadata":{},"source":"$ \\dfrac12+\\dfrac2{2^2}+\\dfrac3{2^3}+\\cdots+ \\dfrac n{2^n}\\,=\\,\n2-\\dfrac{n+2}{2^n}.$"}
+{"cell_type":"code","execution_count":14,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":"def sumadefraccionescuadradas(n):\n    contador = 0\n    for i in srange(0, n+1):\n        contador += i/(2**i)\n    return contador"}
+{"cell_type":"code","execution_count":15,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":"def resultado(n):\n    return (2-(n+2)/2**n)"}
+{"cell_type":"code","execution_count":16,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":"L = []\nfor i in srange(0, 1000):\n    L.append(sumadefraccionescuadradas(i) == resultado(i))"}
+{"cell_type":"code","execution_count":17,"metadata":{"collapsed":false,"trusted":false},"outputs":[],"source":"all(L)"}

@@ -1,0 +1,8 @@
+{"kernelspec":{"display_name":"SageMath 7.3","language":"","name":"sagemath"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
+{"cell_type":"markdown","metadata":{"collapsed":true},"source":"FACTORIZAR UN ENTERO"}
+{"cell_type":"code","execution_count":1,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"data":{"text/plain":"2^2 * 3^2 * 5"},"execution_count":1,"metadata":{},"output_type":"execute_result"}],"source":"(180).factor()"}
+{"cell_type":"markdown","metadata":{},"source":"OPERACIONES ELEMENTALES"}
+{"cell_type":"code","execution_count":2,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"name":"stdout","output_type":"stream","text":"81 81\n"}],"source":"#suma y multiplicacion como siempre\n#potencia\nprint (3**4), \nprint (3^4)"}
+{"cell_type":"code","execution_count":3,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"name":"stdout","output_type":"stream","text":"2 1\n"}],"source":"#division normal\n#parte entera\nprint (7//3),\n#resto\nprint (7%3)\n#si operacion combinada sigue el orden matematico comun"}
+{"cell_type":"markdown","metadata":{},"source":"LISTAS Y TUPLAS"}
+{"cell_type":"code","execution_count":4,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"name":"stdout","output_type":"stream","text":"([1, 5, 9, -5, 7],) ((1, 5, 9, -5, 7),)\n"}],"source":"#listas con mayusculas y corchetes\nL=[1,5,9,-5,7],\nprint (L),\n#tuplas con minusculas y parentesis --> No se pueden asignar nuevos valores a los elementos de esta\nl=(1,5,9,-5,7),\nprint(l)"}

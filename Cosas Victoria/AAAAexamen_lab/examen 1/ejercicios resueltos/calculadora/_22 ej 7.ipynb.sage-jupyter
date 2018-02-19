@@ -1,0 +1,5 @@
+{"kernelspec":{"display_name":"SageMath 7.3","language":"","name":"sagemath"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
+{"cell_type":"code","execution_count":2,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"data":{"image/png":"smc-blob::6efd2ffb-0895-4a0b-afc8-63c79fff98a2","text/plain":"Graphics object consisting of 3 graphics primitives"},"metadata":{},"output_type":"display_data"}],"source":"L1 = plot(x^2, (x,-4,4))\nvar('x, y')\nL2 = implicit_plot(x^2+(y-6)^2==9,(x,-3,3),(y,0, 15)) + implicit_plot(x^2+(x^2-6)^2==9,(x,-3,3),(y,0, 15))\nshow(L2+L1)"}
+{"cell_type":"code","execution_count":1,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":"parabola(x) = x**2"}
+{"cell_type":"code","execution_count":null,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":"circulo(x, a, R) = x^2+(y-a)^2 == R"}
+{"cell_type":"code","execution_count":null,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":""}

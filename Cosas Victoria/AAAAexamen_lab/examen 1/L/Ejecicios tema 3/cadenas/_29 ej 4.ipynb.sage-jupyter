@@ -1,0 +1,8 @@
+{"kernelspec":{"display_name":"SageMath 7.3","language":"","name":"sagemath"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
+{"cell_type":"code","execution_count":2,"metadata":{"collapsed":false,"trusted":false},"outputs":[],"source":"a = factorial(1000) #asignamos a la cadena a el factorial de 1000"}
+{"cell_type":"code","execution_count":3,"metadata":{"collapsed":false,"trusted":false},"outputs":[{"data":{"text/plain":"10539"},"execution_count":3,"metadata":{},"output_type":"execute_result"}],"source":"sum(a.digits())"}
+{"cell_type":"code","execution_count":5,"metadata":{"collapsed":false,"trusted":false},"outputs":[],"source":"b = str(a)  #copiamos en b la cadena a "}
+{"cell_type":"code","execution_count":6,"metadata":{"collapsed":false,"trusted":false},"outputs":[{"data":{"text/plain":"smc-blob::000ddf6e-e3a0-453f-bf2b-4465ec2e0284"},"execution_count":6,"metadata":{},"output_type":"execute_result"}],"source":"b"}
+{"cell_type":"code","execution_count":11,"metadata":{"collapsed":false,"trusted":false},"outputs":[],"source":"contador = 0\nfor i in range(0, len(b)):  #redordamos que len nos daba la cantidad de elementos que hay en la cadena\n    contador += int(b[i])"}
+{"cell_type":"code","execution_count":12,"metadata":{"collapsed":false,"trusted":false},"outputs":[{"data":{"text/plain":"10539"},"execution_count":12,"metadata":{},"output_type":"execute_result"}],"source":"contador"}
+{"cell_type":"code","execution_count":null,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":""}

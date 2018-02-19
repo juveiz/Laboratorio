@@ -1,0 +1,10 @@
+{"kernelspec":{"display_name":"SageMath 7.3","language":"","name":"sagemath"},"language_info":{"codemirror_mode":{"name":"ipython","version":2},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython2","version":"2.7.10"}}
+{"cell_type":"code","execution_count":1,"metadata":{"collapsed":true,"trusted":true},"outputs":[],"source":"primos = prime_range(100, 1001)"}
+{"cell_type":"code","execution_count":2,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"data":{"text/plain":"509"},"execution_count":2,"metadata":{},"output_type":"execute_result"}],"source":"primos[floor(len(primos)/2)] # función suelo "}
+{"cell_type":"code","execution_count":3,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"data":{"text/plain":"41"},"execution_count":3,"metadata":{},"output_type":"execute_result"}],"source":"primos.index(331)"}
+{"cell_type":"code","execution_count":4,"metadata":{"collapsed":false,"trusted":true},"outputs":[{"data":{"text/plain":"89"},"execution_count":4,"metadata":{},"output_type":"execute_result"}],"source":"primos.index(631)"}
+{"cell_type":"code","execution_count":5,"metadata":{"collapsed":true,"trusted":true},"outputs":[],"source":"L1 = primos[41:90]"}
+{"cell_type":"code","execution_count":6,"metadata":{"collapsed":true,"trusted":true},"outputs":[],"source":"L2 = primos[::4] + primos[3::4]"}
+{"cell_type":"code","execution_count":7,"metadata":{"collapsed":false,"trusted":true},"outputs":[],"source":"L2.sort()  # ordenar la lista "}
+{"cell_type":"code","execution_count":8,"metadata":{"collapsed":true,"trusted":true},"outputs":[],"source":"L3 = primos[::3] + primos[2::3]\nL3.sort()"}
+{"cell_type":"code","execution_count":null,"metadata":{"collapsed":true,"trusted":false},"outputs":[],"source":""}

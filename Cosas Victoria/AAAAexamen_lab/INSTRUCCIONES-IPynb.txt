@@ -1,0 +1,25 @@
+1) En la carpeta IPYNB_mios debes ir creando una jerarquía de subcarpetas para 
+mantener ordenadas, según el criterio que te convenga, los notebooks de IPython 
+con los que trabajaremos. 
+2) En una terminal cambiar al directorio SAGE-noteb, dentro del escritorio, por 
+ejemplo 
+cd ~/Desktop/SAGE-noteb/
+3) Ejecutar en la terminal 
+sage -notebook=jupyter
+Debe abrirse el navegador por defecto, y vemos el contenido de la carpeta 
+SAGE-noteb. Si pinchamos en IPYNB_mios veremos su contenido.
+4)Si pinchamos en un notebook, con extensión .ipynb, veremos su contenido pero 
+se abrirá como Python2, no como SAGE. Antes de ejecutar celdas debemos cambiar 
+de núcleo: vamos al menú Kernel y en la última entrada podemos seleccionar el 
+kernel de SAGE. 
+5) Jupyter dispone de un sistema para pasar los archivos .ipynb (notebooks de Jupyter) 
+a PDF para imprimirlos. No funciona bien en la distribución de Jupyter incluida con SAGE. 
+En una máquina del Laboratorio puedes 
+A) Abrir una terminal y cambiar el directorio al que contiene la hoja a procesar, 
+por ejemplo
+cd ~/Desktop/SAGE-noteb/IPYNB_mios/
+B) Ejecutar 
+/usr/local/anaconda2/bin/jupyter nbconvert --to pdf <nombre de la hoja>.ipynb  
+y debe generarse un archivo
+<nombre de la hoja>.pdf
+
