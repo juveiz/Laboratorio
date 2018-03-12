@@ -454,8 +454,39 @@ contiene un estudio de uno de los generadores primitivos, inventado por
 vonNeumann.
 
 \subsection{Generaci\'on eficiente de n\'umeros aleatorios} 
-**************************************FALTA**************************************
-*******hay una referencia en COMPL*******************
+
+%%%**************************************FALTA**********%%%
+%%%*******hay una referencia en COMPL*******************%%%
+
+El generador de n\'umeros (pseudo-)aleatorios que utilizan, por defecto, Python y {\sage} es, como acabamos de ver,  el llamado {\bf Mersenne Twister}, y se considera actualmente como uno de los mejores. Cuando debemos generar millones de n\'umeros  aleatorios conviene hacerlo directamente en C ya que, como sabemos, Python se interpreta no se compila y es esencialmente lento. 
+
+Mediante Cython podemos utilizar las siguientes funciones que llaman al mismo generador pero calculando en C: 
+
+\begin{lstlisting}
+%%cython
+cdef extern from 'gsl/gsl_rng.h':
+	ctypedef struct gsl_rng_type:
+		pass
+	ctypedef struct gsl_rng:
+		pass
+	gsl_rng_type *gsl_rng_mt19937
+	gsl_rng *gsl_rng_alloc(gsl_rng_type * T)
+
+cdef gsl_rng *r = gsl_rng_alloc(gsl_rng_mt19937)
+
+cdef extern from 'gsl/gsl_randist.h':
+	long int uniform 'gsl_rng_uniform_int'(gsl_rng * r, unsigned long int n)
+
+def main():
+	cdef int n
+	n = uniform(r,1000000)
+	return n
+\end{lstlisting}
+
+
+
+
+
 
 \begin{ejer}
  
@@ -1178,13 +1209,13 @@ Queremos resolver este problema experimentalmente con la ayuda de
  
 \end{ejer}
 
-\begin{ejer}
+%%\begin{ejer}
  
-\end{ejer}
+%%\end{ejer}
 
-\begin{ejer}
+%%\begin{ejer}
  
-\end{ejer}
+%%\end{ejer}
  
 
  
